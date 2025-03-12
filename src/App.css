@@ -160,3 +160,11 @@
   margin: 20px auto 20px auto; /* Add top margin for padding */
   height: 80px; /* Adjust the height as needed */
 }
+
+/* Projects container styles */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

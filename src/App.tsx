@@ -3,9 +3,18 @@ import { useState, useEffect, JSX } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Timeline from './components/Timeline';
 import TimelineItem from './components/TimelineItem';
+import ProjectCard from './components/ProjectCard'; // Import ProjectCard component
 import './App.css';
+import './components/ProjectCard.css'; // Import ProjectCard styles
 import profilePic from './assets/profile.jpg';
 import logo from './assets/icon.png'; // Import your logo
+import clrViaLogo from './assets/clr_via.jpg'; // Import CLR VIA logo
+import scholarlyLogo from './assets/scholarly.jpg'; // Import Scholarly logo
+import eCommerceLogo from './assets/e_commerce.gif'; // Import E-Commerce logo
+import forkKnifeLogo from './assets/fork_knife.jpg'; // Import Fork & Knife logo
+import virtualFileSystemLogo from './assets/virtual_filesystem.png'; // Import Virtual Shell logo
+import songSphereLogo from './assets/song_sphere.svg'; // Import SongSphere logo
+import gitHubLogo from './assets/github.jpg'; // Import GitHub logo
 
 /**
  * Main application component.
@@ -219,7 +228,50 @@ function Projects(): JSX.Element {
   return (
     <div id="projects" className="section">
       <h1 className="section-title">Projects</h1>
-      <p className="section-text">Project details go here.</p>
+      <div className="projects-container">
+        <ProjectCard
+          image={clrViaLogo}
+          title="CLR VIA - React Web App"
+          description="ReactJS web application that allows the users to easily build their resumes, cover letters, curriculum vitae, or portfolio website with the help of Google Gemini AI."
+          link="https://github.com/CLR-VIA"
+        />
+        <ProjectCard
+          image={scholarlyLogo}
+          title="Scholarly App"
+          description="A scholarship and academic award management app. A Windows 11 Desktop app developed with Python, SQLite, PyQt, and Google Cloud APIs."
+          link="https://github.com/angel-badillo-hernandez/scholarly_app"
+        />
+        <ProjectCard
+          image={eCommerceLogo}
+          title="E-Commerce App"
+          description="An e-commerce mobile app. A React Native app developed with JavaScript, Expo SDK, MongoDB, and Python with FastAPI for the backend."
+          link="https://github.com/angel-badillo-hernandez/E-Commerce-App"
+        />
+        <ProjectCard
+          image={forkKnifeLogo}
+          title="ForkKnife FoodTruck Locator App"
+          description="A food truck locator app. A Flutter app developed with Dart, Google Maps API, and Firebase."
+          link="https://github.com/angel-badillo-hernandez/food_truck_app"
+        />
+        <ProjectCard
+          image={virtualFileSystemLogo}
+          title="Linux-like Shell & Virtual File System"
+          description="A virtual bash shell and file system. A console app developed with Python and SQLite."
+          link="https://github.com/angel-badillo-hernandez/Virtual-Filesystem"
+        />
+        <ProjectCard
+          image={songSphereLogo}
+          title="SongSphere App"
+          description="A Spotify song recommendation app for the 2024 Tiktok TechJam. A ReactJS app developed with JavaScript, Spotify API, Google Gemini API, and a Python backend."
+          link="https://github.com/ozgurttufekci/SongSphere"
+        />
+        <ProjectCard
+          image={gitHubLogo}
+          title="More on My GitHub!"
+          description="And many, many, more on my GitHub! Check out my GitHub profile for more projects and contributions."
+          link="https://github.com/angel-badillo-hernandez"
+        />
+      </div>
     </div>
   );
 }
@@ -239,9 +291,9 @@ function Contact(): JSX.Element {
       <h1 className="section-title">Contact</h1>
       <p className="section-text">Let's connect!</p>
       <div className="contact-icons">
-        <a href="https://linkedin.com/in/yourprofile" className="contact-icon"><FaLinkedin size={35} /></a> {/* Increased size */}
-        <a href="mailto:your.email@example.com" className="contact-icon"><FaEnvelope size={35} /></a> {/* Increased size */}
-        <a href="https://github.com/yourgithub" className="contact-icon"><FaGithub size={35} /></a> {/* Increased size */}
+        <a href="https://linkedin.com/in/angel-badillo-hernandez" className="contact-icon"><FaLinkedin size={35} /></a> {/* Increased size */}
+        <a href="mailto:badilloa022402@gmail.com" className="contact-icon"><FaEnvelope size={35} /></a> {/* Increased size */}
+        <a href="https://github.com/angel-badillo-hernandez" className="contact-icon"><FaGithub size={35} /></a> {/* Increased size */}
       </div>
     </div>
   );
