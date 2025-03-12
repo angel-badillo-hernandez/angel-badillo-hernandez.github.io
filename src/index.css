@@ -42,6 +42,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  max-width: calc(100% - 40px); /* Ensure body takes full width minus padding */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  padding-left: 20px; /* Add padding to the left */
+  padding-right: 20px; /* Add padding to the right */
 }
 
 /* Heading styles */

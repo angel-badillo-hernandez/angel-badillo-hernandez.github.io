@@ -66,10 +66,17 @@ function NavBar(): JSX.Element {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setIsNavOpen(false);
+    }
+  }, [isMobile]);
+
   return (
     <nav className="navbar">
       {isMobile && (
-        <div className="hamburger" onClick={toggleNav}>
+        <div className={`hamburger ${isNavOpen ? 'active' : ''}`} onClick={toggleNav}>
           <div></div>
           <div></div>
           <div></div>
@@ -85,7 +92,6 @@ function NavBar(): JSX.Element {
         <a href="/resume.pdf" className="nav-link" onClick={toggleNav}>Resume</a>
       </div>
     </nav>
-
   );
 }
 
