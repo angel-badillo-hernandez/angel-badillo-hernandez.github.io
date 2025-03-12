@@ -205,10 +205,10 @@ function Experience(): JSX.Element {
         />
         <TimelineItem
           position="left"
-          duration="May 2020 - August 2020"
-          title="Assembly Line Worker"
-          subtitle="Rapco Parts Company"
-          location="Bowie, TX, USA"
+          duration="August 2022 - December 2022"
+          title="Student Assistant"
+          subtitle="Midwestern State University"
+          location="Wichita Falls, TX, USA"
           description={
             <div style={{ textAlign: "left" }}>
               <p>Coached concepts such as abstraction, object-oriented programming, GPU programming, and networking using C, C++, C#, and Python</p>
@@ -219,14 +219,14 @@ function Experience(): JSX.Element {
         />
         <TimelineItem
           position="right"
-          duration="August 2022 - December 2022"
-          title="Student Assistant"
-          subtitle="Midwestern State University"
-          location="Wichita Falls, TX, USA"
+          duration="May 2020 - August 2020"
+          title="Assembly Line Worker"
+          subtitle="Rapco Parts Company"
+          location="Bowie, TX, USA"
           description={
             <div style={{ textAlign: "left" }}>
-              <p>Assembled components in collaboration with other team members, exceeding daily quotas by about 10-25%.</p>
-              <p>Performed calibration and maintenance of equipment with team members to ensure safe, optimal performance.</p>
+              <p>Assembled components in collaboration with other team members, exceeding daily quotas by about 10-25%</p>
+              <p>Performed calibration and maintenance of equipment with team members to ensure safe, optimal performance</p>
             </div>
           }
 
