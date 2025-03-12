@@ -1,0 +1,74 @@
+/* Base styles for timeline items */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Positioning for left-aligned timeline items */
+.timeline-item.left {
+  left: -6%;
+}
+
+/* Positioning for right-aligned timeline items */
+.timeline-item.right {
+  left: 46%;
+}
+
+/* Arrow for left-aligned timeline items */
+.timeline-item.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px; /* Restore the original position */
+  border: medium solid var(--primary-color);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--primary-color);
+}
+
+/* Arrow for right-aligned timeline items */
+.timeline-item.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px; /* Restore the original position */
+  border: medium solid var(--primary-color);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--primary-color) transparent transparent;
+}
+
+/* Content styles for timeline items */
+.timeline-item-content {
+  padding: 20px 30px;
+  background-color: var(--secondary-color);
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Heading styles for timeline items */
+.timeline-item-content h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+/* Text styles for timeline items */
+.timeline-item-content h4,
+.timeline-item-content p {
+  color: var(--text-color);
+}
+
+/* New styles for location field */
+.timeline-item-content .location,
+.timeline-item-content .duration {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}

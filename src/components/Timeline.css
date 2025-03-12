@@ -1,0 +1,19 @@
+/* Base styles for the timeline container */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Vertical line in the center of the timeline */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px; /* Adjusted width */
+  background-color: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px; /* Adjusted margin */
+}
