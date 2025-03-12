@@ -1,0 +1,14 @@
+.skill-bubble {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--text-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-bubble:hover {
+  background-color: var(--primary-color);
+  color: white;
+}

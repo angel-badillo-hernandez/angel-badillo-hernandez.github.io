@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import Timeline from './components/Timeline';
 import TimelineItem from './components/TimelineItem';
 import ProjectCard from './components/ProjectCard'; // Import ProjectCard component
+import SkillBubble from './components/SkillBubble'; // Import SkillBubble component
 import './App.css';
 import './components/ProjectCard.css'; // Import ProjectCard styles
 import profilePic from './assets/profile.jpg';
@@ -31,6 +32,7 @@ function App(): JSX.Element {
         <Projects />
         <Skills />
         <Contact />
+        <Footer /> {/* Add Footer component */}
       </div>
     </Router>
   );
@@ -66,23 +68,23 @@ function NavBar(): JSX.Element {
   }, []);
   return (
     <nav className="navbar">
-          {isMobile && (
-            <div className="hamburger" onClick={toggleNav}>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          )}
-          <div className={`navbar-nav ${isNavOpen ? 'active' : ''}`}>
-            <a href="#about" className="nav-link" onClick={toggleNav}>About</a>
-            <a href="#education" className="nav-link" onClick={toggleNav}>Education</a>
-            <a href="#experience" className="nav-link" onClick={toggleNav}>Work</a>
-            <a href="#projects" className="nav-link" onClick={toggleNav}>Projects</a>
-            <a href="#skills" className="nav-link" onClick={toggleNav}>Skills</a>
-            <a href="#contact" className="nav-link" onClick={toggleNav}>Contact</a>
-            <a href="/resume.pdf" className="nav-link" onClick={toggleNav}>Resume</a>
-          </div>
-        </nav>
+      {isMobile && (
+        <div className="hamburger" onClick={toggleNav}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      )}
+      <div className={`navbar-nav ${isNavOpen ? 'active' : ''}`}>
+        <a href="#about" className="nav-link" onClick={toggleNav}>About</a>
+        <a href="#education" className="nav-link" onClick={toggleNav}>Education</a>
+        <a href="#experience" className="nav-link" onClick={toggleNav}>Experience</a>
+        <a href="#projects" className="nav-link" onClick={toggleNav}>Projects</a>
+        <a href="#skills" className="nav-link" onClick={toggleNav}>Skills</a>
+        <a href="#contact" className="nav-link" onClick={toggleNav}>Contact</a>
+        <a href="/resume.pdf" className="nav-link" onClick={toggleNav}>Resume</a>
+      </div>
+    </nav>
 
   );
 }
@@ -136,7 +138,7 @@ function Education(): JSX.Element {
           duration="May 2024"
           title="Master of Science in Computer Science"
           subtitle="Midwestern State University"
-          location="Wichita Falls, TX"
+          location="Wichita Falls, TX, USA"
           description={
             <div style={{ textAlign: "left" }}>
               <p><strong>GPA:</strong> 4.0</p>
@@ -150,7 +152,7 @@ function Education(): JSX.Element {
           duration="December 2023"
           title="Bachelor of Science in Computer Science"
           subtitle="Midwestern State University"
-          location="Wichita Falls, TX"
+          location="Wichita Falls, TX, USA"
           description={
             <div style={{ textAlign: "left" }}>
               <p><strong>GPA:</strong> 3.8</p>
@@ -203,10 +205,10 @@ function Experience(): JSX.Element {
         />
         <TimelineItem
           position="left"
-          duration="January 2023 - May 2023"
-          title="Student Assistant"
-          subtitle="Midwestern State University"
-          location="Wichita Falls, TX, USA"
+          duration="May 2020 - August 2020"
+          title="Assembly Line Worker"
+          subtitle="Rapco Parts Company"
+          location="Bowie, TX, USA"
           description={
             <div style={{ textAlign: "left" }}>
               <p>Coached concepts such as abstraction, object-oriented programming, GPU programming, and networking using C, C++, C#, and Python</p>
@@ -214,6 +216,20 @@ function Experience(): JSX.Element {
               <p>Aided students in developing C++ and Python applications by providing debugging support</p>
             </div>
           }
+        />
+        <TimelineItem
+          position="right"
+          duration="August 2022 - December 2022"
+          title="Student Assistant"
+          subtitle="Midwestern State University"
+          location="Wichita Falls, TX, USA"
+          description={
+            <div style={{ textAlign: "left" }}>
+              <p>Assembled components in collaboration with other team members, exceeding daily quotas by about 10-25%.</p>
+              <p>Performed calibration and maintenance of equipment with team members to ensure safe, optimal performance.</p>
+            </div>
+          }
+
         />
       </Timeline>
     </div>
@@ -280,7 +296,65 @@ function Skills(): JSX.Element {
   return (
     <div id="skills" className="section">
       <h1 className="section-title">Skills</h1>
-      <p className="section-text">Skills details go here.</p>
+      <div className="skills-container">
+        <h2 className="skills-heading">Programming Languages</h2>
+        <SkillBubble skill="C/C++" />
+        <SkillBubble skill="Python" />
+        <SkillBubble skill="JavaScript" />
+        <SkillBubble skill="TypeScript" />
+        <SkillBubble skill="Dart" />
+        <SkillBubble skill="C#" />
+        <SkillBubble skill="Java" />
+        <SkillBubble skill="SQL" />
+
+        <h2 className="skills-heading">Technical Skills</h2>
+        <SkillBubble skill="MongoDB" />
+        <SkillBubble skill="React Native" />
+        <SkillBubble skill="ReactJS" />
+        <SkillBubble skill="HTML/CSS" />
+        <SkillBubble skill="NodeJS" />
+        <SkillBubble skill="Flutter" />
+        <SkillBubble skill="FastAPI" />
+        <SkillBubble skill="Digital Ocean" />
+        <SkillBubble skill="Docker" />
+        <SkillBubble skill="Linux/Unix" />
+        <SkillBubble skill="Git" />
+        <SkillBubble skill="GitHub" />
+        <SkillBubble skill="Firebase" />
+        <SkillBubble skill="Google Cloud Platform" />
+        <SkillBubble skill="CUDA" />
+        <SkillBubble skill="MATLAB" />
+        <SkillBubble skill="PyQt6" />
+        <SkillBubble skill="Software Quality Assurance" />
+        <SkillBubble skill="Android Studio" />
+        <SkillBubble skill="Google Gemini API" />
+        <SkillBubble skill="MPI" />
+        <SkillBubble skill="Parallel Programming" />
+        <SkillBubble skill="REST APIs" />
+        <SkillBubble skill="Visual Studio" />
+        <SkillBubble skill="Visual Studio Code" />
+
+        <h2 className="skills-heading">Office and Productivity Tools</h2>
+        <SkillBubble skill="Microsoft Office" />
+        <SkillBubble skill="Google Sheets" />
+        <SkillBubble skill="Google Docs" />
+        <SkillBubble skill="Google Slides" />
+
+        <h2 className="skills-heading">Soft Skills</h2>
+        <SkillBubble skill="Problem Solving" />
+        <SkillBubble skill="Team Collaboration" />
+        <SkillBubble skill="Adaptability" />
+        <SkillBubble skill="Strong Communication" />
+        <SkillBubble skill="Critical Thinking" />
+        <SkillBubble skill="Time Management" />
+        <SkillBubble skill="Self-Motivation" />
+        <SkillBubble skill="Attention to Detail" />
+        <SkillBubble skill="Continuous Learning" />
+
+        <h2 className="skills-heading">Languages</h2>
+        <SkillBubble skill="Spanish" />
+        <SkillBubble skill="English" />
+      </div>
     </div>
   );
 }
@@ -289,13 +363,28 @@ function Contact(): JSX.Element {
   return (
     <div id="contact" className="section">
       <h1 className="section-title">Contact</h1>
-      <p className="section-text">Let's connect!</p>
+      <p className="section-text" style={{textAlign: "center"}}>Thanks for visiting! Let's connect!</p>
+      <p className="section-text" style={{textAlign: "center"}}><em style={{ color: "red" }}>Science is Elegant! 🚀</em> - From Dr. Stone</p>
+
       <div className="contact-icons">
         <a href="https://linkedin.com/in/angel-badillo-hernandez" className="contact-icon"><FaLinkedin size={35} /></a> {/* Increased size */}
         <a href="mailto:badilloa022402@gmail.com" className="contact-icon"><FaEnvelope size={35} /></a> {/* Increased size */}
         <a href="https://github.com/angel-badillo-hernandez" className="contact-icon"><FaGithub size={35} /></a> {/* Increased size */}
       </div>
     </div>
+  );
+}
+
+/**
+ * Footer component.
+ * @returns {JSX.Element} The rendered component.
+ */
+function Footer(): JSX.Element {
+  const currentYear = new Date().getFullYear();
+  return (
+    <footer className="footer">
+      <p>Copyright &copy; {currentYear} Angel Badillo Hernandez</p>
+    </footer>
   );
 }
 

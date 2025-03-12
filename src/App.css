@@ -103,6 +103,7 @@
   width: 100%;
   scroll-margin-top: 60px; /* Adjust for fixed navbar */
   margin: 0; /* Ensure no additional margin */
+  padding-bottom: 80px; /* Add padding to prevent overlap with footer */
 }
 
 /* Section title styles */
@@ -167,4 +168,35 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+}
+
+/* Skills container styles */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Skills heading styles */
+.skills-heading {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+  color: var(--primary-color);
+  font-family: 'Courier Prime', monospace; /* Added font-family */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Added glow */
+}
+
+/* Footer styles */
+.footer {
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px 0; /* Reduce padding to decrease height */
+  width: 100%;
+  position: relative; /* Ensure it stays at the bottom */
+  margin-top: 20px; /* Add margin to create space above the footer */
+  left: 0; /* Ensure it extends from side to side */
 }
