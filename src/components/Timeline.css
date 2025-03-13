@@ -17,3 +17,15 @@
   left: 50%;
   margin-left: -2px; /* Adjusted margin */
 }
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px; /* Add padding to the left */
+  }
+
+  .timeline::after {
+    left: 20px; /* Move the line to the left */
+    margin-left: 0; /* Remove margin */
+  }
+}
